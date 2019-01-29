@@ -1,11 +1,12 @@
-# 環境セットアップ
-JHipsterを動かすために以下のものがローカルに必要です。
+# 事前の環境セットアップ
+JHipsterを動かすために以下のものがローカルに必要なので事前にセットアップして来てもらえるとスムーズです。
  - JDK 8u201
  - Maven
  - git
  - node 10.15.0
 
 またJava IDEとして、Eclipse / IntelliJ / VCCode などがあると作業をすすめやすいです。
+説明自体は、EclipseとVSCodeで行います。
 
 ## Macの場合
 ### JDK 8u201
