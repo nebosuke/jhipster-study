@@ -12,7 +12,7 @@ JHipsterを動かすために以下のものがローカルに必要です。
  - Oracleのサイト (https://www.oracle.com/technetwork/es/java/javase/downloads/jdk8-downloads-2133151.html) から jdk-8u201-macosx-x64.dmg をダウンロードしてインストールする
 
 ### Maven
- - homebrew でインストールする (homebrew 自体のインストールは https://brew.sh/index_ja　)
+ - homebrew でインストールする (homebrew 自体のインストールは https://brew.sh/index_ja)
 ```
 brew install maven
 ```
@@ -66,11 +66,15 @@ npm install -g npm
 ### JDK8u201
  - システムの詳細設定 > 環境変数 を開き、システム環境変数として ```JAVA_HOME``` 値は、```C:\Program Files\Java\jdk1.8.0_201``` を設定
 
+![環境変数の設定](assets/windows_env_system.png)
+
 ### Maven
  - バイナリ配布パッケージをダウンロードして任意のディレクトリに展開
  - システムの詳細設定 > 環境変数 で、```M2_HOME``` をインストールした先のディレクトリ名で作成。
 
  - Path に、```%JAVA_HOME%¥bin``` と ```%M2_HOME%¥bin``` を追加する
+
+![パスの設定](assets/windows_env_path.png)
 
 ### git
  - https://git-scm.com/download/win からインストーラーをダウンロードしてインストール
