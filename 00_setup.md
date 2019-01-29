@@ -89,9 +89,12 @@ npm install -g npm
 > nvm use 10.15.0
 ```
 
- - npm の更新のために npm-windows-upgrade をインストール
+ - npm を更新できるようにする
+  コマンドプロンプトで以下の手順を試してみる。
 ```
-> Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
-> npm install -g --production npm-windows-upgrade
-> npm-windows-upgrade
+cd %ProgramFiles%\nodejs
+del npm npx npm.cmd npx.cmd
+move node_modules\npm node_modules\npm2
+node node_modules\npm2\bin\npm-cli.js i -g npm@latest
+rd /S /Q node_modules\npm2
 ```
