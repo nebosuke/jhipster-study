@@ -93,5 +93,5 @@ npm install -g npm
 ```
 > Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
 > npm install -g --production npm-windows-upgrade
-> npm install -g npm
+> npm-windows-upgrade
 ```
