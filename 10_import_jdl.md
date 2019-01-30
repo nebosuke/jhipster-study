@@ -50,7 +50,12 @@ jhipster import-jdl {path/to/jdl-file.jh}
 - データベース
 
 ## 確認してみる
+
+単純にエンティティを操作するUIが自動生成される。
 ![Entitiesに追加される](assets/10_jdl_1.png)
 ![AngularによるUIが生成される](assets/10_jdl_2.png)
+
+この画面はAngularで作られており、
+
 ![操作のためのRESTAPI](assets/10_jdl_3.png)
 ![DBに保存された様子](assets/10_jdl_4.png)
