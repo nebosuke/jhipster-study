@@ -98,3 +98,9 @@ move node_modules\npm node_modules\npm2
 node node_modules\npm2\bin\npm-cli.js i -g npm@latest
 rd /S /Q node_modules\npm2
 ```
+
+### JHipsterのインストール
+```
+$ npm install -g yo
+$ npm install -g generator-jhipster
+```
