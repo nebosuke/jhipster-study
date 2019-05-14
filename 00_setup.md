@@ -1,6 +1,6 @@
 # 事前の環境セットアップ
 JHipsterを動かすために以下のものがローカルに必要なので事前にセットアップして来てもらえるとスムーズです。
- - JDK 8u201
+ - JDK 8u211
  - Maven
  - git
  - node 10.15.0
@@ -9,8 +9,13 @@ JHipsterを動かすために以下のものがローカルに必要なので事
 説明自体は、EclipseとVSCodeで行います。
 
 ## Macの場合
-### JDK 8u201
- - Oracleのサイト (https://www.oracle.com/technetwork/es/java/javase/downloads/jdk8-downloads-2133151.html) から jdk-8u201-macosx-x64.dmg をダウンロードしてインストールする
+### JDK 8u211
+ - (個人利用の場合) Oracleのサイト (https://www.oracle.com/technetwork/es/java/javase/downloads/jdk8-downloads-2133151.html) から jdk-8u201-macosx-x64.dmg をダウンロードしてインストールする
+ - (商用利用の場合) Adopt OpenJDK 8 homebrewで ado
+```
+brew tap homebrew/cask-versions
+brew cask install adoptopenjdk8
+```
 
 ### Maven
  - homebrew でインストールする (homebrew 自体のインストールは https://brew.sh/index_ja)
@@ -24,7 +29,7 @@ brew install git
 ```
 
 ### node
- - JHipsterがLTS版を要求するので、10.15.0 を利用可能なようにセットアップする。
+ - JHipsterがLTS版を要求するので、10.15.3 を利用可能なようにセットアップする。
  - 複数のバージョンを切り替えられるように nodebrew を用いるのがおすすめ。
 
  - nodebrew のインストール
@@ -37,12 +42,12 @@ curl -L git.io/nodebrew | perl - setup
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 ```
 
- - node 10.15.0 のインストール
+ - node 10.15.3 のインストール
 ```
-nodebrew install v10.15.0
-nodebrew use v10.15.0
+nodebrew install v10.15.3
+nodebrew use v10.15.3
 node -v
-v10.15.0
+v10.15.3
 ```
 
  - 残念なことに nodebrew を使わずに node をインストールしてしまった場合は、以下の手順でアンインストールして nodebrew を改めてインストールした方がいい。
@@ -64,8 +69,8 @@ npm install -g npm
 ```
 
 ## Windowsの場合
-### JDK8u201
- - システムの詳細設定 > 環境変数 を開き、システム環境変数として ```JAVA_HOME``` 値は、```C:\Program Files\Java\jdk1.8.0_201``` を設定
+### JDK8u211
+ - システムの詳細設定 > 環境変数 を開き、システム環境変数として ```JAVA_HOME``` 値は、```C:\Program Files\Java\jdk1.8.0_211``` を設定
 
 ![環境変数の設定](assets/windows_env_system.png)
 
@@ -85,8 +90,8 @@ npm install -g npm
  - nvm-install (https://github.com/coreybutler/nvm-windows/releases) でインストールするのをオススメ 
  - PowerShell を管理者モードで起動して
 ```
-> nvm install 10.15.0
-> nvm use 10.15.0
+> nvm install 10.15.3
+> nvm use 10.15.3
 ```
 
  - npm を更新できるようにする
