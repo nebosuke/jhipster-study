@@ -11,7 +11,7 @@ JHipsterを動かすために以下のものがローカルに必要なので事
 ## Macの場合
 ### JDK 8u211
  - (個人利用の場合) Oracleのサイト (https://www.oracle.com/technetwork/es/java/javase/downloads/jdk8-downloads-2133151.html) から jdk-8u201-macosx-x64.dmg をダウンロードしてインストールする
- - (商用利用の場合) Adopt OpenJDK 8 homebrewで ado
+ - (商用利用の場合) Adopt OpenJDK 8 homebrewでインストールする 8u212 が入るがこれでもOK
 ```
 brew tap homebrew/cask-versions
 brew cask install adoptopenjdk8
@@ -29,7 +29,7 @@ brew install git
 ```
 
 ### node
- - JHipsterがLTS版を要求するので、10.15.3 を利用可能なようにセットアップする。
+ - JHipsterがLTS版を要求するので、10.16.0 を利用可能なようにセットアップする。
  - 複数のバージョンを切り替えられるように nodebrew を用いるのがおすすめ。
 
  - nodebrew のインストール
@@ -42,12 +42,12 @@ curl -L git.io/nodebrew | perl - setup
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 ```
 
- - node 10.15.3 のインストール
+ - node 10.16.0 のインストール
 ```
-nodebrew install v10.15.3
-nodebrew use v10.15.3
+nodebrew install v10.16.0
+nodebrew use v10.16.0
 node -v
-v10.15.3
+v10.16.0
 ```
 
  - 残念なことに nodebrew を使わずに node をインストールしてしまった場合は、以下の手順でアンインストールして nodebrew を改めてインストールした方がいい。
@@ -95,7 +95,7 @@ npm install -g npm
 ```
 
  - npm を更新できるようにする
-  コマンドプロンプトで以下の手順を試してみる。
+  コマンドプロンプト(cmd)で以下の手順を試してみる。
 ```
 cd %ProgramFiles%\nodejs
 del npm npx npm.cmd npx.cmd

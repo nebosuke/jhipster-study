@@ -4,6 +4,7 @@ SonarQubeは、コードの重複やサイクロマティック数をチェッ�
 JHipsterで生成したプロジェクトには SonarQube の Dockerfile が含まれているので簡単にコードの静的解析を実行することができる。
 
 ## SonarQubeの起動
+```src/main/docker/sonar.yml```のポート番号を9000に変更しなければならない。
 ```
 $ docker-compose -f src/main/docker/sonar.yml up -d
 ```
@@ -14,7 +15,7 @@ $ ./mvnw sonar:sonar
 ```
 
 ## 解析結果の確認
-http://localhost:9001
+http://localhost:9000
 
 ## SonarQubeの停止
 ```
