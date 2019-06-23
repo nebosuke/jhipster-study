@@ -18,7 +18,7 @@ jhipster
 ./mvnw
 ```
 
-[10_import_jdl.md] で使ったJDLをインポートしてみる。
+[JDLによるモデル層の設計](/10_import_jdl.md) で使ったJDLをインポートしてみる。
 
 ```
 jhipster import-jdl ../book_author.jh
