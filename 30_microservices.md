@@ -10,13 +10,15 @@ npm install
 
 http://localhost:8761 で JHipster Registry にアクセスできる。
 
-## アプリケーションの作成
+## アプリケーション(book)の作成
 ```
-mkdir my-first-microservice-app
-cd my-first-microservice-app
+mkdir book-app
+cd book-app
 jhipster
 ./mvnw
 ```
+
+アプリケーションのタイプとして Microservice application を選択。
 
 [JDLによるモデル層の設計](/10_import_jdl.md) で使ったJDLをインポートしてみる。
 これによってモデル層のクラスが自動的に生成される。
@@ -41,9 +43,26 @@ jhipster
 jhipster import-jdl ../book_author.jh
 ```
 
-## 別のマイクロサービスを登録してみる
+## 別のマイクロサービス(review)を登録してみる
 ```
 mkdir review-app
 cd review-app
 jhipster
 ```
+
+アプリケーションのタイプとして Microservice application を選択。
+同一ホストで動かすのでポート番号を8081から8082とかに変更する。
+
+```
+jhipster entity review
+```
+
+Book に対してのレビューを登録できるようなエンティティを作成する。
+このとき、マイクロサービスをまたがって Book へのリレーションシップは作れない。そういうユースケースが必要になる場合はマイクロサービスの切り方の単位がよろしくない。
+
+gateway の側で、
+```
+jhipster entity review
+```
+
+とすると、新しいエンティティ用のフロントエンドのコードも自動的に生成される。
